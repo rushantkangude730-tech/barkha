@@ -1,0 +1,912 @@
+/* ===================================================
+                    RESET
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #ffd6e8,
+        #ffe7f2,
+        #ffd4e8,
+        #ffc4dd
+    );
+
+    overflow-x:hidden;
+
+    color:#444;
+}
+
+/* ===================================================
+                BACKGROUND
+=================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.5),transparent 30%),
+
+    radial-gradient(circle at 80% 10%,rgba(255,255,255,.35),transparent 30%),
+
+    radial-gradient(circle at 50% 80%,rgba(255,255,255,.4),transparent 30%);
+
+    z-index:-1;
+
+    animation:bgMove 15s infinite alternate;
+}
+
+@keyframes bgMove{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/* ===================================================
+                    HERO
+=================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+/* ===================================================
+                    GLASS CARD
+=================================================== */
+
+.glass{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:430px;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:35px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:
+
+        0 20px 60px rgba(255,105,180,.25);
+
+    animation:floatCard 4s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/* ===================================================
+                    TITLE
+=================================================== */
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:#ff2f7f;
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+/* ===================================================
+                GIRL IMAGE
+=================================================== */
+
+.girl{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:
+
+        0 0 25px hotpink,
+
+        0 0 60px rgba(255,20,147,.4);
+
+    animation:photoFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes photoFloat{
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+}
+
+/* ===================================================
+                    TEDDY
+=================================================== */
+
+.teddy{
+
+    position:absolute;
+
+    width:110px;
+
+    right:-20px;
+
+    bottom:-10px;
+
+    animation:teddy 2s infinite;
+
+}
+
+@keyframes teddy{
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/* ===================================================
+                TYPING AREA
+=================================================== */
+
+#typing{
+
+    margin-top:35px;
+
+    min-height:140px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+/* ===================================================
+                    BUTTON
+=================================================== */
+
+button{
+
+    margin-top:25px;
+
+    padding:16px 36px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f95;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:
+
+        0 10px 25px rgba(255,105,180,.35);
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2677;
+
+}
+
+/* ===================================================
+                STORY SECTION
+=================================================== */
+
+.story{
+
+    padding:80px 25px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.story h2{
+
+    color:#ff2f7f;
+
+    margin-bottom:30px;
+
+    font-size:40px;
+
+}
+
+.story p{
+
+    max-width:650px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+/* ===================================================
+                STORY IMAGE
+=================================================== */
+
+.storyImage{
+
+    width:280px;
+
+    border-radius:25px;
+
+    margin-top:20px;
+
+    box-shadow:
+
+        0 15px 40px rgba(255,105,180,.3);
+
+}
+
+/* ===================================================
+                HIDDEN
+=================================================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:48px;
+
+    }
+
+    .girl{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .glass{
+
+        padding:30px 20px;
+
+    }
+
+    .story h2{
+
+        font-size:32px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+    .teddy{
+
+        width:85px;
+
+        right:-5px;
+
+    }
+
+}
+
+/* ===================================================
+                    GALLERY
+=================================================== */
+
+.gallery{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+}
+
+.gallery h2{
+
+    font-size:42px;
+
+    color:#ff2f7f;
+
+    margin-bottom:45px;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.galleryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+
+    gap:20px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.galleryGrid img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:6px solid white;
+
+    box-shadow:
+
+        0 12px 30px rgba(255,105,180,.25);
+
+    transition:.5s;
+
+}
+
+.galleryGrid img:hover{
+
+    transform:scale(1.06) rotate(2deg);
+
+}
+
+
+
+/* ===================================================
+                PROPOSAL
+=================================================== */
+
+.proposal{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.proposalCard{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:
+
+        0 25px 60px rgba(255,105,180,.35);
+
+    animation:proposalFloat 4s infinite;
+
+}
+
+@keyframes proposalFloat{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+.bigHeart{
+
+    font-size:90px;
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    25%{
+
+        transform:scale(1.15);
+
+    }
+
+    50%{
+
+        transform:scale(1);
+
+    }
+
+    75%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+.proposalCard h2{
+
+    margin-top:15px;
+
+    color:#ff2f7f;
+
+    font-size:34px;
+
+}
+
+.proposalCard p{
+
+    margin:25px 0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.proposalCard h3{
+
+    color:#ff2f7f;
+
+    font-size:30px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* ===================================================
+                BUTTON GROUP
+=================================================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+#yesBtn{
+
+    background:#ff2f7f;
+
+}
+
+#yesBtn:hover{
+
+    background:#ff0066;
+
+}
+
+#noBtn{
+
+    background:#ffd5e7;
+
+    color:#444;
+
+}
+
+#noBtn:hover{
+
+    background:#ffc2dc;
+
+}
+
+
+
+/* ===================================================
+            FALLING FLOWERS
+=================================================== */
+
+#flowers{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.flower{
+
+    position:absolute;
+
+    top:-60px;
+
+    font-size:28px;
+
+    animation:flowerFall linear forwards;
+
+}
+
+@keyframes flowerFall{
+
+    from{
+
+        transform:
+
+        translateY(-80px)
+
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(120vh)
+
+        rotate(720deg);
+
+        opacity:.2;
+
+    }
+
+}
+
+
+
+/* ===================================================
+                HEARTS
+=================================================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:heartUp linear forwards;
+
+}
+
+@keyframes heartUp{
+
+    from{
+
+        transform:
+
+        translateY(0)
+
+        scale(.5);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-120vh)
+
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ===================================================
+                SPARKLES
+=================================================== */
+
+#sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+
+        0 0 12px white,
+
+        0 0 25px hotpink;
+
+    animation:sparkle 2s infinite;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+    50%{
+
+        transform:scale(2);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ===================================================
+                MUSIC BUTTON
+=================================================== */
+
+.musicBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    box-shadow:
+
+        0 8px 25px rgba(255,105,180,.3);
+
+    cursor:pointer;
+
+    z-index:999;
+
+}
+
+
+
+/* ===================================================
+            MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    .galleryGrid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .proposalCard{
+
+        padding:35px 20px;
+
+    }
+
+    .proposalCard h2{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .galleryGrid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    .proposalCard h3{
+
+        font-size:24px;
+
+    }
+
+}
