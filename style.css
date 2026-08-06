@@ -1,0 +1,787 @@
+/* ===========================================
+        RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #4a0404,
+        #7b0f1d,
+        #b11226,
+        #d7263d
+    );
+
+    color:white;
+
+}
+
+/* ===========================================
+        BACKGROUND GLOW
+=========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    radial-gradient(circle at 20% 20%,
+    rgba(255,255,255,.08),
+    transparent 30%),
+
+    radial-gradient(circle at 80% 10%,
+    rgba(255,255,255,.06),
+    transparent 25%),
+
+    radial-gradient(circle at 50% 80%,
+    rgba(255,255,255,.08),
+    transparent 35%);
+
+    animation:bgAnimation 15s infinite alternate;
+
+    z-index:-1;
+
+}
+
+@keyframes bgAnimation{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+/* ===========================================
+            HERO
+=========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+/* ===========================================
+            GLASS CARD
+=========================================== */
+
+.glass{
+
+    width:100%;
+
+    max-width:430px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.25);
+
+    animation:floatCard 4s infinite;
+
+}
+
+@keyframes floatCard{
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ===========================================
+            TITLE
+=========================================== */
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:62px;
+
+    color:#fff;
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#ffe5e5;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ===========================================
+            PROFILE
+=========================================== */
+
+.profile{
+
+    width:220px;
+
+    height:220px;
+
+    margin-top:30px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:
+
+        0 0 25px rgba(255,255,255,.35);
+
+    animation:photoFloat 5s infinite;
+
+}
+
+@keyframes photoFloat{
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+/* ===========================================
+        TYPING TEXT
+=========================================== */
+
+#typing{
+
+    margin-top:30px;
+
+    min-height:150px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:#fff;
+
+}
+
+/* ===========================================
+            BUTTON
+=========================================== */
+
+button{
+
+    margin-top:30px;
+
+    border:none;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:white;
+
+    color:#c2185b;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ffe4e1;
+
+}
+
+/* ===========================================
+        ALL PAGES
+=========================================== */
+
+.page{
+
+    min-height:100vh;
+
+    padding:70px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===========================================
+        PHOTO
+=========================================== */
+
+.photo{
+
+    width:300px;
+
+    max-width:90%;
+
+    border-radius:25px;
+
+    border:6px solid white;
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.page h2{
+
+    margin-top:30px;
+
+    font-size:42px;
+
+    color:white;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.page p{
+
+    max-width:650px;
+
+    margin-top:20px;
+
+    line-height:2;
+
+    font-size:19px;
+
+    color:#ffeaea;
+
+}
+
+/* ===========================================
+        FINAL CARD
+=========================================== */
+
+.finalCard{
+
+    width:100%;
+
+    max-width:450px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+.heart{
+
+    font-size:90px;
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+/* ===========================================
+        MOBILE
+=========================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:48px;
+
+    }
+
+    .profile{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .page h2{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .glass{
+
+        padding:25px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================================
+        FALLING PETALS
+=========================================== */
+
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-60px;
+
+    font-size:28px;
+
+    animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:
+        translateY(-100px)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(120vh)
+        rotate(720deg)
+        translateX(80px);
+
+        opacity:.2;
+
+    }
+
+}
+
+/* ===========================================
+        HEARTS
+=========================================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.floatingHeart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    color:#ffb6c1;
+
+    animation:heartFloat linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:
+        translateY(0)
+        scale(.5);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================================
+        SPARKLES
+=========================================== */
+
+#sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+
+        0 0 12px white,
+
+        0 0 25px #ff4d6d,
+
+        0 0 40px #ff99aa;
+
+    animation:twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(2);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(0);
+
+    }
+
+}
+
+/* ===========================================
+        PHOTO HOVER
+=========================================== */
+
+.profile,
+.photo{
+
+    transition:.5s;
+
+}
+
+.profile:hover,
+.photo:hover{
+
+    transform:
+
+        scale(1.03)
+
+        rotate(2deg);
+
+    box-shadow:
+
+        0 20px 50px rgba(255,255,255,.4);
+
+}
+
+/* ===========================================
+        BUTTON SHINE
+=========================================== */
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60px;
+
+    height:100%;
+
+    background:
+
+        rgba(255,255,255,.45);
+
+    transform:skewX(-25deg);
+
+    transition:.6s;
+
+}
+
+button:hover::before{
+
+    left:130%;
+
+}
+
+/* ===========================================
+        SCROLL ANIMATION
+=========================================== */
+
+.page{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+        MUSIC BUTTON
+=========================================== */
+
+.musicBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#c2185b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 8px 25px rgba(0,0,0,.3);
+
+    z-index:999;
+
+}
+
+/* ===========================================
+        FINAL CARD
+=========================================== */
+
+.finalCard{
+
+    animation:zoomIn .8s;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================================
+        RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+    .petal{
+
+        font-size:22px;
+
+    }
+
+    .floatingHeart{
+
+        font-size:18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .musicBtn{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:20px;
+
+    }
+
+}
